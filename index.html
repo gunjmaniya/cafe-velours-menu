@@ -1,720 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  >
-
-  <meta name="theme-color" content="#211713">
-
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#201713">
   <title>Café Velours | Menu</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hero{background:radial-gradient(circle at 50% 12%,#4b342a 0,#2a1d18 42%,#17100d 100%)}
+    .logo-link img{box-shadow:0 14px 35px #0008;border:1px solid #d2b08466}
+    .category-nav{box-shadow:0 6px 22px #2117130d}
+    .search{border-radius:14px;box-shadow:0 10px 30px #2117130c}
+    .menu-section{padding:18px 14px 10px;border:1px solid #e2d7cb;border-radius:18px;background:#fff;box-shadow:0 14px 40px #4c35250b}
+    .menu-group{border-bottom-color:#eadfd4}
+    .menu-item{grid-template-columns:minmax(0,1fr) auto;margin:5px 0;padding:16px 12px;border:0;border-radius:12px}
+    .menu-item:nth-child(even){background:#faf7f2}
+    .menu-item.recommended{position:relative;background:linear-gradient(100deg,#f6ead8 0,#fffaf2 100%);box-shadow:inset 3px 0 #b18a5b}
+    .item-title{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+    .item-title em{padding:4px 7px;border:1px solid #c9a675;border-radius:99px;color:#8b6339;background:#fff9ee;font:700 6px "Manrope";letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+    .menu-item>strong{padding:7px 9px;border-radius:8px;background:#211713;color:#f5dfc2}
+    .menu-item>button,.selection-bar,.overlay,.selection-sheet,.toast{display:none!important}
+    .recommend-key{display:inline-flex;align-items:center;margin-top:13px;padding:7px 11px;border:1px solid #d8bd97;border-radius:99px;background:#fff9ef;color:#8b6339;font-size:8px;font-weight:700;letter-spacing:.04em}
+  </style>
 </head>
-
 <body>
-
-  <!-- Hero Section -->
-
-  <header class="hero"> 
-
-    <!-- Clickable Café Logo -->
-
-      <img
-        src="logo cafe.png"
-        alt="Café Velours logo"
-        class="cafe-logo"
-      >
+  <header class="hero">
+    <a class="logo-link" href="https://chatgpt.com/s/m_6aacd7c9a840819189e35252af20a7b7" target="_blank" rel="noopener noreferrer" aria-label="Open Café Velours logo link">
+      <img src="cafe-velours-logo.png" alt="Café Velours logo">
     </a>
-
-    <h1>
-      Café<br>
-      <span>Velours</span>
-    </h1>
-
+    <p>COFFEE · COMFORT · CULTURE</p>
+    <h1>Café <span>Velours</span></h1>
     <div class="hero-line"></div>
-
-    <small>
-      Thoughtfully brewed. Beautifully served.
-    </small>
-
-    <div class="status">
-      <i></i>
-      OPEN · 10 AM — 11 PM
-    </div>
-
+    <small>Coolers, coffee and comfort food.</small>
+    <div class="status"><i></i> FULL MENU · 95 ITEMS</div>
   </header>
 
-
-  <!-- Category Navigation -->
-
-  <nav class="category-nav">
-    <div class="category-list">
-
-      <a class="category-link active" href="#coffee">
-        Coffee
-      </a>
-
-      <a class="category-link" href="#cold">
-        Cold Drinks
-      </a>
-
-      <a class="category-link" href="#bites">
-        Quick Bites
-      </a>
-
-      <a class="category-link" href="#desserts">
-        Desserts
-      </a>
-
-    </div>
+  <nav class="category-nav" aria-label="Menu categories">
+    <div class="category-list" id="categoryNav"></div>
   </nav>
 
-
   <main>
-
-    <!-- Search -->
-
     <section class="intro">
-
       <p>OUR SELECTION</p>
-
-      <h2>
-        Simple pleasures,<br>
-        served daily.
-      </h2>
-
+      <h2>Choose what you love.</h2>
       <label class="search">
-        <span>⌕</span>
-
-        <input
-          id="menuSearch"
-          type="search"
-          placeholder="Search the menu"
-          autocomplete="off"
-        >
+        <span aria-hidden="true">⌕</span>
+        <input id="menuSearch" type="search" placeholder="Search food or drinks" autocomplete="off">
       </label>
-
-      <p
-        class="no-results"
-        id="noResults"
-        hidden
-      >
-        No item found.
-      </p>
-
+      <span class="recommend-key">★ RECOMMENDED · 2 PICKS FROM EVERY CATEGORY</span>
+      <p class="no-results" id="noResults" hidden>No matching item found.</p>
     </section>
 
-
-    <!-- Hot Coffee -->
-
-    <section class="menu-section" id="coffee">
-
-      <div class="section-head">
-        <div>
-          <small>01</small>
-          <h2>Hot Coffee</h2>
-        </div>
-
-        <span>Freshly brewed</span>
-      </div>
-
-
-      <div class="items">
-
-        <article class="menu-item featured">
-          <div>
-            <div class="item-name">
-              <h3>Velours Signature Latte</h3>
-              <em>Signature</em>
-            </div>
-
-            <p>
-              Double espresso, textured milk
-              and velvet cream
-            </p>
-          </div>
-
-          <strong>₹229</strong>
-
-          <button
-            type="button"
-            aria-label="Add Signature Latte"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Cappuccino</h3>
-
-            <p>
-              Espresso, steamed milk and rich foam
-            </p>
-          </div>
-
-          <strong>₹179</strong>
-
-          <button
-            type="button"
-            aria-label="Add Cappuccino"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Café Mocha</h3>
-
-            <p>
-              Dark chocolate, espresso and warm milk
-            </p>
-          </div>
-
-          <strong>₹219</strong>
-
-          <button
-            type="button"
-            aria-label="Add Cafe Mocha"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Classic Americano</h3>
-
-            <p>
-              Double espresso finished with hot water
-            </p>
-          </div>
-
-          <strong>₹149</strong>
-
-          <button
-            type="button"
-            aria-label="Add Americano"
-          >
-            +
-          </button>
-        </article>
-
-      </div>
-    </section>
-
-
-    <!-- Cold Drinks -->
-
-    <section class="menu-section" id="cold">
-
-      <div class="section-head">
-        <div>
-          <small>02</small>
-          <h2>Cold Drinks</h2>
-        </div>
-
-        <span>Chilled & refreshing</span>
-      </div>
-
-
-      <div class="items">
-
-        <article class="menu-item featured">
-          <div>
-            <div class="item-name">
-              <h3>Velours Cold Coffee</h3>
-              <em>Popular</em>
-            </div>
-
-            <p>
-              Creamy cold coffee with vanilla foam
-            </p>
-          </div>
-
-          <strong>₹239</strong>
-
-          <button
-            type="button"
-            aria-label="Add Cold Coffee"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Iced Spanish Latte</h3>
-
-            <p>
-              Espresso, condensed milk and fresh milk
-            </p>
-          </div>
-
-          <strong>₹249</strong>
-
-          <button
-            type="button"
-            aria-label="Add Spanish Latte"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Classic Mojito</h3>
-
-            <p>
-              Fresh mint, lime and sparkling soda
-            </p>
-          </div>
-
-          <strong>₹189</strong>
-
-          <button
-            type="button"
-            aria-label="Add Mojito"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Peach Iced Tea</h3>
-
-            <p>
-              Black tea infused with peach
-            </p>
-          </div>
-
-          <strong>₹179</strong>
-
-          <button
-            type="button"
-            aria-label="Add Peach Iced Tea"
-          >
-            +
-          </button>
-        </article>
-
-      </div>
-    </section>
-
-
-    <!-- Quick Bites -->
-
-    <section class="menu-section" id="bites">
-
-      <div class="section-head">
-        <div>
-          <small>03</small>
-          <h2>Quick Bites</h2>
-        </div>
-
-        <span>Made to order</span>
-      </div>
-
-
-      <div class="items">
-
-        <article class="menu-item featured">
-          <div>
-            <div class="item-name">
-              <h3>Velours Club Sandwich</h3>
-              <em>Chef's choice</em>
-            </div>
-
-            <p>
-              Grilled vegetables, cheese
-              and house sauce
-            </p>
-          </div>
-
-          <strong>₹269</strong>
-
-          <button
-            type="button"
-            aria-label="Add Club Sandwich"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Margherita Pizza</h3>
-
-            <p>
-              Tomato, mozzarella and fresh basil
-            </p>
-          </div>
-
-          <strong>₹299</strong>
-
-          <button
-            type="button"
-            aria-label="Add Pizza"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Arrabbiata Pasta</h3>
-
-            <p>
-              Penne in spicy tomato sauce and herbs
-            </p>
-          </div>
-
-          <strong>₹289</strong>
-
-          <button
-            type="button"
-            aria-label="Add Pasta"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Peri Peri Fries</h3>
-
-            <p>
-              Crispy fries with peri peri seasoning
-            </p>
-          </div>
-
-          <strong>₹169</strong>
-
-          <button
-            type="button"
-            aria-label="Add Fries"
-          >
-            +
-          </button>
-        </article>
-
-      </div>
-    </section>
-
-
-    <!-- Desserts -->
-
-    <section class="menu-section" id="desserts">
-
-      <div class="section-head">
-        <div>
-          <small>04</small>
-          <h2>Desserts</h2>
-        </div>
-
-        <span>A sweet finish</span>
-      </div>
-
-
-      <div class="items">
-
-        <article class="menu-item featured">
-          <div>
-            <div class="item-name">
-              <h3>Biscoff Cheesecake</h3>
-              <em>Must try</em>
-            </div>
-
-            <p>
-              Creamy cheesecake with Biscoff crumb
-            </p>
-          </div>
-
-          <strong>₹249</strong>
-
-          <button
-            type="button"
-            aria-label="Add Cheesecake"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Sizzling Brownie</h3>
-
-            <p>
-              Warm brownie, vanilla ice cream
-              and sauce
-            </p>
-          </div>
-
-          <strong>₹259</strong>
-
-          <button
-            type="button"
-            aria-label="Add Brownie"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Chocolate Croissant</h3>
-
-            <p>
-              Buttery pastry with dark chocolate
-            </p>
-          </div>
-
-          <strong>₹179</strong>
-
-          <button
-            type="button"
-            aria-label="Add Croissant"
-          >
-            +
-          </button>
-        </article>
-
-
-        <article class="menu-item">
-          <div>
-            <h3>Tiramisu Jar</h3>
-
-            <p>
-              Coffee-soaked layers with mascarpone
-            </p>
-          </div>
-
-          <strong>₹229</strong>
-
-          <button
-            type="button"
-            aria-label="Add Tiramisu"
-          >
-            +
-          </button>
-        </article>
-
-      </div>
-    </section>
-
-
-    <!-- Information -->
+    <div id="menuRoot"></div>
 
     <aside class="note">
-      <img
-        src="logo cafe.png"
-        alt="Café Velours logo"
-        class="note-logo"
-      >
-
+      <span>V</span>
       <div>
         <h3>Made with care</h3>
-
-        <p>
-          Please inform our team about any
-          allergies or dietary preferences.
-        </p>
+        <p>Please inform our team about allergies or dietary preferences before ordering.</p>
       </div>
     </aside>
-
   </main>
 
-
-  <!-- Footer -->
-
   <footer>
-
-    <img
-      src="logo cafe.png"
-      alt="Café Velours logo"
-      class="footer-logo"
-    >
-
-    <div class="footer-brand">
-      Café Velours
-    </div>
-
-    <p>
-      Good coffee. Quiet moments.
-    </p>
-
-    <div>
-      <a href="tel:+919999999999">
-        +91 99999 99999
-      </a>
-
-      <a
-        href="https://instagram.com/"
-        target="_blank"
-        rel="noopener"
-      >
-        @cafevelours
-      </a>
-
-      <a href="https://cafevelours.com">
-        www.cafevelours.com
-      </a>
-    </div>
-
-    <small>
-      Prices include applicable taxes ·
-      Pure vegetarian
-    </small>
-
+    <div class="footer-brand">Café Velours</div>
+    <p>Good coffee. Beautiful moments.</p>
+    <small>All prices are in Indian Rupees.</small>
   </footer>
 
-
-  <!-- Selection Button -->
-
-  <button
-    class="selection-bar"
-    id="billBar"
-    type="button"
-    hidden
-  >
-    <span>
-      <b id="billCount">0</b>
-      selected
-    </span>
-
-    <strong>
-      View total ·
-      ₹<span id="billBarTotal">0</span>
-    </strong>
+  <button class="selection-bar" id="billBar" type="button" hidden>
+    <span><b id="billCount">0</b> items</span>
+    <strong>View total · ₹<span id="billBarTotal">0</span></strong>
   </button>
 
-
-  <!-- Overlay -->
-
-  <div
-    class="overlay"
-    id="cartOverlay"
-  ></div>
-
-
-  <!-- Selected Items Panel -->
-
-  <aside
-    class="selection-sheet"
-    id="cartSheet"
-    aria-hidden="true"
-  >
-
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="selection-sheet" id="cartSheet" aria-hidden="true">
     <div class="sheet-handle"></div>
-
     <div class="sheet-head">
-      <div>
-        <small>YOUR SELECTION</small>
-        <h2>Selected items</h2>
-      </div>
-
-      <button
-        id="closeCart"
-        type="button"
-        aria-label="Close selected items"
-      >
-        ×
-      </button>
+      <div><small>YOUR SELECTION</small><h2>Selected items</h2></div>
+      <button id="closeCart" type="button" aria-label="Close bill">×</button>
     </div>
-
-
-    <div
-      class="selected-list"
-      id="cartList"
-    ></div>
-
-
-    <div
-      class="empty"
-      id="emptyCart"
-    >
-      <span>V</span>
-
-      <h3>Nothing selected yet</h3>
-
-      <p>
-        Tap + to add an item.
-      </p>
+    <div class="selected-list" id="cartList"></div>
+    <div class="empty" id="emptyCart">
+      <span>V</span><h3>Nothing selected yet</h3><p>Tap + beside any item.</p>
     </div>
-
-
     <div class="summary">
-
-      <div>
-        <span>Items total</span>
-
-        <b>
-          ₹<span id="subtotal">0</span>
-        </b>
-      </div>
-
-      <div>
-        <span>Taxes</span>
-        <b>Included</b>
-      </div>
-
-      <div class="total">
-        <span>Total price</span>
-
-        <strong>
-          ₹<span id="grandTotal">0</span>
-        </strong>
-      </div>
-
-      <button
-        id="clearOrder"
-        type="button"
-      >
-        Clear selection
-      </button>
-
+      <div><span>Items total</span><b>₹<span id="subtotal">0</span></b></div>
+      <div class="total"><span>Total price</span><strong>₹<span id="grandTotal">0</span></strong></div>
+      <button id="clearOrder" type="button">Clear selection</button>
     </div>
   </aside>
 
-
-  <!-- Notification -->
-
-  <div
-    class="toast"
-    id="toast"
-  >
-    Item added
-  </div>
-
-
-  <!-- JavaScript -->
-
+  <div class="toast" id="toast" role="status">Item added</div>
   <script src="script.js"></script>
-
 </body>
 </html>
