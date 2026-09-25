@@ -2,263 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  >
-
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#201713">
-
   <title>Café Velours | Menu</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
   <style>
-    .hero {
-      background:
-        radial-gradient(
-          circle at 50% 12%,
-          #4b342a 0,
-          #2a1d18 42%,
-          #17100d 100%
-        );
-    }
-
-    .logo-link img {
-      border: 1px solid #d2b08466;
-      box-shadow: 0 14px 35px #0008;
-    }
-
-    .category-nav {
-      box-shadow: 0 6px 22px #2117130d;
-    }
-
-    .search {
-      border-radius: 14px;
-      box-shadow: 0 10px 30px #2117130c;
-    }
-
-    .menu-section {
-      padding: 18px 14px 10px;
-      border: 1px solid #e2d7cb;
-      border-radius: 18px;
-      background: #ffffff;
-      box-shadow: 0 14px 40px #4c35250b;
-    }
-
-    .menu-group {
-      border-bottom-color: #eadfd4;
-    }
-
-    .menu-group > summary {
-      cursor: default;
-      pointer-events: none;
-    }
-
-    .menu-group > summary span::after {
-      display: none !important;
-    }
-
-    .menu-item {
-      grid-template-columns: minmax(0, 1fr) auto;
-      margin: 5px 0;
-      padding: 16px 12px;
-      border: 0;
-      border-radius: 12px;
-    }
-
-    .menu-item:nth-child(even) {
-      background: #faf7f2;
-    }
-
-    .menu-item.recommended {
-      position: relative;
-      background: linear-gradient(
-        100deg,
-        #f6ead8 0,
-        #fffaf2 100%
-      );
-      box-shadow: inset 3px 0 #b18a5b;
-    }
-
-    .item-title {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .item-title em {
-      padding: 4px 7px;
-      border: 1px solid #c9a675;
-      border-radius: 99px;
-      background: #fff9ee;
-      color: #8b6339;
-      font: 700 6px "Manrope", sans-serif;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .menu-item > strong {
-      padding: 7px 9px;
-      border-radius: 8px;
-      background: #211713;
-      color: #f5dfc2;
-    }
-
-    .menu-item > button,
-    .selection-bar,
-    .overlay,
-    .selection-sheet,
-    .toast {
-      display: none !important;
-    }
-
-    .recommend-key {
-      display: inline-flex;
-      align-items: center;
-      margin-top: 13px;
-      padding: 7px 11px;
-      border: 1px solid #d8bd97;
-      border-radius: 99px;
-      background: #fff9ef;
-      color: #8b6339;
-      font-size: 8px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
+    .hero{background:radial-gradient(circle at 50% 12%,#4b342a 0,#2a1d18 42%,#17100d 100%)}
+    .logo-link img{box-shadow:0 14px 35px #0008;border:1px solid #d2b08466}
+    .category-nav{box-shadow:0 6px 22px #2117130d}
+    .search{border-radius:14px;box-shadow:0 10px 30px #2117130c}
+    .menu-section{padding:18px 14px 10px;border:1px solid #e2d7cb;border-radius:18px;background:#fff;box-shadow:0 14px 40px #4c35250b}
+    .menu-group{border-bottom-color:#eadfd4}
+    .menu-group>summary{cursor:default;pointer-events:none}
+    .menu-group>summary span:after{display:none!important}
+    .menu-item{grid-template-columns:minmax(0,1fr) auto;margin:5px 0;padding:16px 12px;border:0;border-radius:12px}
+    .menu-item:nth-child(even){background:#faf7f2}
+    .menu-item.recommended{position:relative;background:linear-gradient(100deg,#f6ead8 0,#fffaf2 100%);box-shadow:inset 3px 0 #b18a5b}
+    .item-title{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+    .item-title em{padding:4px 7px;border:1px solid #c9a675;border-radius:99px;color:#8b6339;background:#fff9ee;font:700 6px "Manrope";letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+    .menu-item>strong{padding:7px 9px;border-radius:8px;background:#211713;color:#f5dfc2}
+    .menu-item>button,.selection-bar,.overlay,.selection-sheet,.toast{display:none!important}
+    .recommend-key{display:inline-flex;align-items:center;margin-top:13px;padding:7px 11px;border:1px solid #d8bd97;border-radius:99px;background:#fff9ef;color:#8b6339;font-size:8px;font-weight:700;letter-spacing:.04em}
   </style>
 </head>
-
 <body>
-
   <header class="hero">
-
-    <a
-      class="logo-link"
-      href="https://chatgpt.com/s/m_6aacd7c9a840819189e35252af20a7b7"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Open Café Velours logo link"
-    >
-      <img
-        src="cafe-velours-logo.png"
-        alt="Café Velours logo"
-      >
+    <a class="logo-link" href="https://chatgpt.com/s/m_6aacd7c9a840819189e35252af20a7b7" target="_blank" rel="noopener noreferrer" aria-label="Open Café Velours logo link">
+      <img src="cafe-velours-logo.png" alt="Café Velours logo">
     </a>
-
     <p>COFFEE · COMFORT · CULTURE</p>
-
-    <h1>
-      Café <span>Velours</span>
-    </h1>
-
+    <h1>Café <span>Velours</span></h1>
     <div class="hero-line"></div>
-
     <small>Coolers, coffee and comfort food.</small>
-
-    <div class="status">
-      <i></i>
-      FULL MENU · 110 ITEMS
-    </div>
-
+    <div class="status"><i></i> FULL MENU · 110 ITEMS</div>
   </header>
 
-  <nav
-    class="category-nav"
-    aria-label="Menu categories"
-  >
-    <div
-      class="category-list"
-      id="categoryNav"
-    ></div>
+  <nav class="category-nav" aria-label="Menu categories">
+    <div class="category-list" id="categoryNav"></div>
   </nav>
 
   <main>
-
     <section class="intro">
-
       <p>OUR SELECTION</p>
-
       <h2>Choose what you love.</h2>
-
       <label class="search">
-
         <span aria-hidden="true">⌕</span>
-
-        <input
-          id="menuSearch"
-          type="search"
-          placeholder="Search food or drinks"
-          autocomplete="off"
-        >
-
+        <input id="menuSearch" type="search" placeholder="Search food or drinks" autocomplete="off">
       </label>
-
-      <span class="recommend-key">
-        ★ RECOMMENDED · 2 PICKS FROM EVERY CATEGORY
-      </span>
-
-      <p
-        class="no-results"
-        id="noResults"
-        hidden
-      >
-        No matching item found.
-      </p>
-
+      <span class="recommend-key">★ RECOMMENDED · 2 PICKS FROM EVERY CATEGORY</span>
+      <p class="no-results" id="noResults" hidden>No matching item found.</p>
     </section>
 
-    <!-- Menu items JavaScript દ્વારા અહીં દેખાશે -->
     <div id="menuRoot"></div>
 
     <aside class="note">
-
       <span>V</span>
-
       <div>
         <h3>Made with care</h3>
-
-        <p>
-          Please inform our team about allergies or dietary
-          preferences before ordering.
-        </p>
+        <p>Please inform our team about allergies or dietary preferences before ordering.</p>
       </div>
-
     </aside>
-
   </main>
 
   <footer>
-
-    <div class="footer-brand">
-      Café Velours
-    </div>
-
+    <div class="footer-brand">Café Velours</div>
     <p>Good coffee. Beautiful moments.</p>
-
-    <small>
-      All prices are in Indian Rupees.
-    </small>
-
+    <small>All prices are in Indian Rupees.</small>
   </footer>
 
-  <script src="script.js"></script>
+  <button class="selection-bar" id="billBar" type="button" hidden>
+    <span><b id="billCount">0</b> items</span>
+    <strong>View total · ₹<span id="billBarTotal">0</span></strong>
+  </button>
 
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="selection-sheet" id="cartSheet" aria-hidden="true">
+    <div class="sheet-handle"></div>
+    <div class="sheet-head">
+      <div><small>YOUR SELECTION</small><h2>Selected items</h2></div>
+      <button id="closeCart" type="button" aria-label="Close bill">×</button>
+    </div>
+    <div class="selected-list" id="cartList"></div>
+    <div class="empty" id="emptyCart">
+      <span>V</span><h3>Nothing selected yet</h3><p>Tap + beside any item.</p>
+    </div>
+    <div class="summary">
+      <div><span>Items total</span><b>₹<span id="subtotal">0</span></b></div>
+      <div class="total"><span>Total price</span><strong>₹<span id="grandTotal">0</span></strong></div>
+      <button id="clearOrder" type="button">Clear selection</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status">Item added</div>
+  <script src="script.js"></script>
 </body>
 </html>
