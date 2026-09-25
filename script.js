@@ -1,1 +1,626 @@
-:root{--espresso:#211713;--brown:#594034;--gold:#b18a5b;--cream:#f4eee5;--paper:#fdfbf7;--muted:#7b7069;--line:#ded5ca}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;background:#e7e1da}body{width:100%;max-width:480px;min-height:100vh;margin:auto;overflow-x:hidden;background:var(--paper);color:var(--espresso);font-family:"Manrope",sans-serif;box-shadow:0 0 40px #2b20191a}body.locked{overflow:hidden}button,input{font:inherit}.hero{position:relative;min-height:430px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:54px 24px 64px;text-align:center;color:#fff;background:var(--espresso);overflow:hidden}.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff14;border-radius:50%}.hero:before{width:330px;height:330px;top:-175px;right:-160px}.hero:after{width:280px;height:280px;bottom:-170px;left:-130px}.logo-link{position:relative;z-index:1;display:block;margin-bottom:22px}.logo-link img{display:block;width:88px;height:94px;object-fit:cover;border-radius:4px}.hero>p{position:relative;z-index:1;color:#c6ad8d;font-size:9px;font-weight:700;letter-spacing:.24em}.hero h1{position:relative;z-index:1;margin:12px 0 10px;font:700 57px/.92 "Cormorant Garamond";letter-spacing:.01em}.hero h1 span{color:#d2b084}.hero-line{width:36px;height:1px;margin:8px 0 14px;background:var(--gold)}.hero>small{color:#c7bbb4;font:600 12px "Cormorant Garamond";letter-spacing:.04em}.status{position:absolute;bottom:22px;padding:8px 13px;border:1px solid #ffffff1f;border-radius:99px;color:#cfc3bc;font-size:8px;letter-spacing:.12em}.status i{display:inline-block;width:6px;height:6px;margin-right:6px;border-radius:50%;background:#7ebc82}.category-nav{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line);background:#fdfbf7f4;backdrop-filter:blur(12px)}.category-list{display:flex;gap:7px;padding:11px 14px;overflow-x:auto;scrollbar-width:none}.category-list::-webkit-scrollbar{display:none}.category-link{flex:0 0 auto;padding:9px 13px;border:1px solid var(--line);border-radius:99px;color:var(--brown);text-decoration:none;font-size:10px;font-weight:600}.category-link.active{border-color:var(--espresso);background:var(--espresso);color:#fff}main{padding:55px 18px 90px}.intro{text-align:center;margin-bottom:56px}.intro>p:first-child,.section-head small,.sheet-head small{color:var(--gold);font-size:8px;font-weight:700;letter-spacing:.22em}.intro h2{margin:8px 0 23px;font:700 38px/1 "Cormorant Garamond"}.search{display:flex;align-items:center;gap:10px;padding:12px 15px;border:1px solid var(--line);border-radius:4px;background:#fff}.search span{color:var(--gold);font-size:20px}.search input{width:100%;border:0;outline:0;background:transparent;font-size:11px}.no-results{margin-top:16px;color:var(--brown);font-size:11px}.menu-section{margin-bottom:60px;scroll-margin-top:74px}.section-head{display:flex;justify-content:space-between;align-items:end;padding-bottom:16px;border-bottom:1px solid var(--espresso)}.section-head h2{font:700 31px "Cormorant Garamond"}.section-head>span{padding-bottom:4px;color:var(--muted);font-size:8px}.menu-group{border-bottom:1px solid var(--line)}.menu-group>summary{display:flex;align-items:center;justify-content:space-between;padding:17px 2px;cursor:pointer;list-style:none}.menu-group>summary::-webkit-details-marker{display:none}.menu-group>summary h3{font:700 20px "Cormorant Garamond"}.menu-group>summary span{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:8px}.menu-group>summary span:after{content:"+";display:grid;place-items:center;width:22px;height:22px;border:1px solid var(--line);border-radius:50%;color:var(--brown);font-size:14px}.menu-group[open]>summary span:after{content:"−"}.items{display:grid;border-top:1px dashed var(--line)}.menu-item{display:grid;grid-template-columns:minmax(0,1fr) auto 32px;align-items:center;gap:10px;padding:18px 2px;border-bottom:1px solid #e9e2d9}.menu-item:last-child{border-bottom:0}.menu-item h4{font:700 17px/1.15 "Cormorant Garamond"}.menu-item p{margin-top:5px;color:var(--muted);font-size:8.5px;line-height:1.5}.menu-item>strong{color:var(--brown);font-size:11px}.menu-item>button{width:30px;height:30px;border:1px solid var(--espresso);border-radius:50%;background:transparent;color:var(--espresso);font-size:18px;line-height:1;cursor:pointer}.menu-item>button:active{background:var(--espresso);color:#fff}.menu-item>button:disabled{border-color:var(--line);color:#a79c94;cursor:not-allowed;font-size:9px}.hidden{display:none!important}.note{display:flex;gap:15px;padding:22px;border:1px solid var(--line);background:var(--cream)}.note>span{flex:0 0 40px;height:40px;display:grid;place-items:center;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font:700 24px "Cormorant Garamond"}.note h3{font:700 20px "Cormorant Garamond"}.note p{margin-top:4px;color:var(--muted);font-size:9px;line-height:1.6}footer{padding:47px 22px 96px;text-align:center;background:var(--espresso);color:#fff}.footer-brand{color:#d2b084;font:700 31px "Cormorant Garamond"}footer>p{margin:4px 0 23px;color:#a99d96;font-size:9px}footer>small{color:#746a65;font-size:7px}.selection-bar{position:fixed;z-index:50;left:50%;bottom:14px;width:calc(min(480px,100%) - 28px);display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border:1px solid #cdb28d;border-radius:5px;background:var(--espresso);color:#fff;box-shadow:0 10px 28px #2117134d;transform:translateX(-50%)}.selection-bar[hidden]{display:none}.selection-bar span{font-size:9px}.selection-bar span b{color:#d2b084}.selection-bar strong{font-size:11px}.overlay{position:fixed;z-index:59;inset:0;visibility:hidden;background:#17100db3;opacity:0;transition:.25s}.overlay.show{visibility:visible;opacity:1}.selection-sheet{position:fixed;z-index:60;left:50%;bottom:0;width:min(480px,100%);max-height:82vh;padding:10px 19px 25px;overflow-y:auto;border-radius:18px 18px 0 0;background:var(--paper);transform:translate(-50%,105%);transition:.3s}.selection-sheet.show{transform:translate(-50%,0)}.sheet-handle{width:38px;height:3px;margin:0 auto 22px;background:#cfc4b8}.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:19px}.sheet-head h2{font:700 30px "Cormorant Garamond"}.sheet-head>button{width:35px;height:35px;border:1px solid var(--line);border-radius:50%;background:#fff;font-size:22px}.selected-list{display:grid;gap:8px}.selected-row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:13px;border:1px solid var(--line);background:#fff}.selected-row h3{font:700 17px "Cormorant Garamond"}.selected-row span{color:var(--muted);font-size:9px}.selected-row>strong{font-size:11px}.qty{display:flex;align-items:center;gap:11px;margin-top:9px}.qty button{width:26px;height:26px;border:1px solid var(--espresso);border-radius:50%;background:transparent}.qty b{font-size:10px}.empty{text-align:center;padding:32px}.empty>span{display:grid;place-items:center;width:48px;height:48px;margin:auto;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font:700 28px "Cormorant Garamond"}.empty h3{margin-top:10px;font:700 19px "Cormorant Garamond"}.empty p{color:var(--muted);font-size:9px}.summary{margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}.summary>div{display:flex;justify-content:space-between;margin-bottom:8px;font-size:10px}.summary .total{align-items:end;margin-top:17px}.total>span{font:700 19px "Cormorant Garamond"}.total strong{color:var(--gold);font:700 25px "Cormorant Garamond"}.summary>button{width:100%;margin-top:11px;padding:11px;border:1px solid var(--espresso);background:transparent;font-size:9px;font-weight:700}.toast{position:fixed;z-index:80;left:50%;bottom:80px;padding:10px 15px;border-radius:99px;background:var(--espresso);color:#fff;font-size:9px;visibility:hidden;opacity:0;transform:translate(-50%,10px);transition:.2s}.toast.show{visibility:visible;opacity:1;transform:translate(-50%,0)}@media(min-width:481px){body{border-left:1px solid #d5cec5;border-right:1px solid #d5cec5}}
+const menu = [
+  {
+    id: "coolers",
+    no: "01",
+    title: "Coolers + Matcha",
+    groups: [
+      {
+        name: "Non-Coffee Mocktails",
+        items: [
+          ["Sol de Mexico", 260],
+          ["Salted Pineapple Refresh", 435],
+          ["Tropical Lychee Spritzer", 475],
+          ["Orange Sunset", 370],
+          ["Chocolate Martini", 475],
+          ["Pink Sakura", 435],
+          ["Lavender Blush Cooler", 350],
+          ["Lavender Mint Mojito", 380],
+          ["Tropical Blue Lagoon", 295],
+          ["Blue Sky", 335],
+          ["Dragon Halo", 340],
+          ["Classic Mint Mojito", 210],
+          ["Strawberry Mojito", 260],
+          ["Blackcurrant Mojito", 260],
+          ["Blueberry Mojito", 260],
+          ["Cranberry Mojito", 260]
+        ]
+      },
+      {
+        name: "Matcha Cloud",
+        items: [
+          ["Coco Matcha Bliss", 445],
+          ["Matcha Iceland Cloud", 440],
+          ["Strawberry Matcha", 435],
+          ["Elderflower Cloud Matcha", 435]
+        ]
+      }
+    ]
+  },
+
+  {
+    id: "coffee",
+    no: "02",
+    title: "Coffee Bar",
+    groups: [
+      {
+        name: "Frappés",
+        items: [
+          ["Classic Frappé", 315],
+          ["Mocha Frappé", 370],
+          ["Hazelnut Frappé", 345],
+          ["Vanilla Frappé", 345],
+          ["Caramel Frappé", 345],
+          ["Salted Caramel Frappé", 345]
+        ]
+      },
+      {
+        name: "Everyday Coffee",
+        items: [
+          ["Espresso", 150, "Hot / Iced"],
+          ["Cappuccino", 225, "Hot / Iced"],
+          ["Latte", 225, "Hot / Iced"],
+          ["Flat White", 210],
+          ["Mocha", 260, "Hot / Iced"],
+          ["Vietnamese Coffee", 260],
+          ["Espresso Tonic / Ginger Ale", 345],
+          ["Espresso Red Bull", 415]
+        ]
+      },
+      {
+        name: "Cold Brew",
+        items: [
+          ["House Blend Cold Brew", 240],
+          ["Cold Brew Tonic / Ginger Ale", 380],
+          ["Cold Brew Red Bull", 435],
+          ["Vietnamese Cold Brew", 335],
+          ["Brew Sundowner", 315],
+          ["Whiskey Barrel Edge", 190],
+          ["Rum Barrel Edge", 190]
+        ]
+      }
+    ]
+  },
+
+  {
+    id: "kitchen",
+    no: "03",
+    title: "Kitchen",
+    groups: [
+      {
+        name: "Starters",
+        items: [
+          ["Cheese Garlic Bread", 350],
+          ["Italian Jalapeño Poppers", 510],
+          ["Peri Peri Paneer Popcorn", 560],
+          ["Mexican Cheese Balls", 480],
+          ["Pesto Potato", 480],
+          ["Honey Chilli Paneer", 480],
+          ["Burshetta", 390],
+          ["Pesto Paneer", 520],
+          ["Limoncello Falafel Platter", 670]
+        ]
+      },
+      {
+        name: "Pasta",
+        items: [
+          ["Alfredo Pasta", 610],
+          ["Chilli Garlic Pasta", 570],
+          ["Arrabbiata Pasta", 560],
+          ["Pink Sauce Pasta", 600],
+          ["Pesto Cream Pasta", 630],
+          ["Rigatoni Pasta", 595],
+          ["Aglio e Olio", 590],
+          ["Pesto Spaghetti", 590]
+        ]
+      }
+    ]
+  },
+
+  {
+    id: "pizza-sandwiches",
+    no: "04",
+    title: "Pizza + Sandwiches",
+    groups: [
+      {
+        name: "Pizza",
+        items: [
+          ["Italian Pizza", 790],
+          ["Margherita Pizza", 750],
+          ["Farmhouse Pizza", 810],
+          ["Mexican Pizza", 790],
+          ["Cottage Cheese Pesto Pizza", 1050],
+          ["Tandoori Pizza", 790],
+          ["Cottage Cheese Peri Peri Pizza", 970],
+          ["Roasted Mushroom Pizza", 820]
+        ]
+      },
+      {
+        name: "Sandwiches",
+        items: [
+          ["Spinach Cottage Cheese Sandwich", 630],
+          ["Cottage Cheese Sandwich", 620],
+          ["Avocado Sandwich", 640],
+          ["Avocado Butter Croissant", 690]
+        ]
+      },
+      {
+        name: "Salads",
+        items: [
+          ["Caesar Salad", 370],
+          ["Exotic Vegetable Saute Salad", 450],
+          ["Creamy Pasta Salad", 490]
+        ]
+      }
+    ]
+  },
+
+  {
+    id: "specials",
+    no: "05",
+    title: "Specials",
+    groups: [
+      {
+        name: "Coffee Mocktails",
+        items: [
+          ["Protein Espresso", 320],
+          ["Midnight Berry Rush", 350],
+          ["Cranberry Cold Brew", 280],
+          ["Rosa Coffee Tropic", 350],
+          ["Spicy Velvet", 435],
+          ["Berry Luscious Espresso", 410],
+          ["Choco Almond", 445],
+          ["Cold Brew Martini", 295],
+          ["Harvest Slim", 295],
+          ["Midnight Berry", 410]
+        ]
+      },
+      {
+        name: "Iced Tea",
+        items: [
+          ["Lemon Iced Tea", 240],
+          ["Peach Iced Tea", 270],
+          ["Cranberry Iced Tea", 240],
+          ["Watermelon Iced Tea", 270],
+          ["Green Apple Iced Tea", 240]
+        ]
+      },
+      {
+        name: "Shakes",
+        items: [
+          ["Oreo Shake", 340],
+          ["Nutella Shake", 370],
+          ["Biscoff Shake", 370],
+          ["Choco Brownie Shake", null, "Price unavailable"],
+          ["Pistachio Shake", 400],
+          ["Mixed Berry Shake", 340]
+        ]
+      }
+    ]
+  },
+
+  {
+    id: "toast-rice",
+    no: "06",
+    title: "Toast + More",
+    groups: [
+      {
+        name: "Toast",
+        items: [
+          ["Creamy Mushroom Open Toast", 520],
+          ["Avocado Toast", 510],
+          ["Beans Open Toast", 540]
+        ]
+      },
+      {
+        name: "Rice Bowls",
+        items: [
+          ["Burnt Garlic Rice", 570],
+          ["Mexican Rice", 450],
+          ["Mushroom Risotto Bowl", 470],
+          ["Peri Peri Rice Bowl", 595],
+          ["Malaysian Rice Bowl", 630]
+        ]
+      },
+      {
+        name: "Desserts",
+        items: [
+          [
+            "Mango Puff",
+            410,
+            "Danish pastry, creamy filling, fresh mango"
+          ],
+          [
+            "Matcha Mont Blanc",
+            430,
+            "Crunchy puff, mango puree & crumbs, matcha ganache, fresh mango"
+          ],
+          [
+            "Matcha Mango Parfait",
+            410,
+            "Muesli & corn flakes, matcha soft serve, fresh strawberries & homemade strawberry puree"
+          ],
+          [
+            "Mango Bento",
+            430,
+            "Moist Victorian sponge, mascarpone filling, fresh mango, mango foam"
+          ],
+          [
+            "Japanese French Toast",
+            380,
+            "Housemade shokupan, Japanese-style butter, caramelised crust, golden syrup"
+          ],
+          [
+            "Tiramisu",
+            370,
+            "Uji matcha / Japanese dark roast coffee"
+          ],
+          [
+            "Japanese Pancakes",
+            390,
+            "Stack of 2, golden syrup & vanilla soft serve"
+          ],
+          [
+            "Thai Mango Sticky Rice",
+            460,
+            "Sweet coconut sticky rice, ripe mangoes, warm coconut cream"
+          ]
+        ]
+      }
+    ]
+  }
+];
+
+/* Two recommended items from every subcategory */
+
+const recommendedItems = new Set([
+  "Salted Pineapple Refresh",
+  "Pink Sakura",
+
+  "Coco Matcha Bliss",
+  "Strawberry Matcha",
+
+  "Classic Frappé",
+  "Salted Caramel Frappé",
+
+  "Cappuccino",
+  "Vietnamese Coffee",
+
+  "House Blend Cold Brew",
+  "Brew Sundowner",
+
+  "Peri Peri Paneer Popcorn",
+  "Limoncello Falafel Platter",
+
+  "Pink Sauce Pasta",
+  "Pesto Cream Pasta",
+
+  "Farmhouse Pizza",
+  "Cottage Cheese Pesto Pizza",
+
+  "Spinach Cottage Cheese Sandwich",
+  "Avocado Butter Croissant",
+
+  "Caesar Salad",
+  "Exotic Vegetable Saute Salad",
+
+  "Cranberry Cold Brew",
+  "Spicy Velvet",
+
+  "Peach Iced Tea",
+  "Watermelon Iced Tea",
+
+  "Biscoff Shake",
+  "Pistachio Shake",
+
+  "Creamy Mushroom Open Toast",
+  "Avocado Toast",
+
+  "Mexican Rice",
+  "Peri Peri Rice Bowl",
+
+  "Matcha Mont Blanc",
+  "Japanese French Toast"
+]);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuRoot = document.querySelector("#menuRoot");
+  const categoryNav = document.querySelector("#categoryNav");
+  const searchInput = document.querySelector("#menuSearch");
+  const noResults = document.querySelector("#noResults");
+  const navigation = document.querySelector(".category-nav");
+
+  const formatPrice = (price) => {
+    return new Intl.NumberFormat("en-IN").format(price);
+  };
+
+  const escapeHTML = (text) => {
+    return String(text).replace(/[&<>"']/g, (character) => {
+      const characters = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      };
+
+      return characters[character];
+    });
+  };
+
+  /* Create categories and menu items */
+
+  menu.forEach((section, sectionIndex) => {
+    const sectionItemCount = section.groups.reduce(
+      (total, group) => total + group.items.length,
+      0
+    );
+
+    categoryNav.insertAdjacentHTML(
+      "beforeend",
+      `
+        <a
+          class="category-link ${sectionIndex === 0 ? "active" : ""}"
+          href="#${section.id}"
+        >
+          ${escapeHTML(section.title)}
+        </a>
+      `
+    );
+
+    const groupHTML = section.groups
+      .map((group, groupIndex) => {
+        const itemsHTML = group.items
+          .map((item, itemIndex) => {
+            const [name, price, note] = item;
+            const itemID =
+              `${section.id}-${groupIndex}-${itemIndex}`;
+
+            const isRecommended =
+              recommendedItems.has(name);
+
+            const priceHTML =
+              price === null
+                ? "—"
+                : `₹${formatPrice(price)}`;
+
+            return `
+              <article
+                class="menu-item ${
+                  isRecommended ? "recommended" : ""
+                }"
+                data-id="${itemID}"
+                data-name="${escapeHTML(name)}"
+              >
+                <div>
+                  <div class="item-title">
+                    <h4>${escapeHTML(name)}</h4>
+
+                    ${
+                      isRecommended
+                        ? "<em>★ Recommended</em>"
+                        : ""
+                    }
+                  </div>
+
+                  ${
+                    note
+                      ? `<p>${escapeHTML(note)}</p>`
+                      : ""
+                  }
+                </div>
+
+                <strong>${priceHTML}</strong>
+              </article>
+            `;
+          })
+          .join("");
+
+        return `
+          <details class="menu-group" open>
+            <summary>
+              <h3>${escapeHTML(group.name)}</h3>
+
+              <span>
+                ${group.items.length} items
+              </span>
+            </summary>
+
+            <div class="items">
+              ${itemsHTML}
+            </div>
+          </details>
+        `;
+      })
+      .join("");
+
+    menuRoot.insertAdjacentHTML(
+      "beforeend",
+      `
+        <section
+          class="menu-section"
+          id="${section.id}"
+        >
+          <div class="section-head">
+            <div>
+              <small>${section.no}</small>
+              <h2>${escapeHTML(section.title)}</h2>
+            </div>
+
+            <span>
+              ${sectionItemCount} items
+            </span>
+          </div>
+
+          ${groupHTML}
+        </section>
+      `
+    );
+  });
+
+  const categoryLinks = [
+    ...document.querySelectorAll(".category-link")
+  ];
+
+  const menuSections = [
+    ...document.querySelectorAll(".menu-section")
+  ];
+
+  const menuItems = [
+    ...document.querySelectorAll(".menu-item")
+  ];
+
+  const menuGroups = [
+    ...document.querySelectorAll(".menu-group")
+  ];
+
+  /* Active category navigation */
+
+  function activateCategory(activeLink) {
+    categoryLinks.forEach((link) => {
+      link.classList.toggle(
+        "active",
+        link === activeLink
+      );
+    });
+
+    categoryNav.scrollTo({
+      left:
+        activeLink.offsetLeft -
+        categoryNav.clientWidth / 2 +
+        activeLink.clientWidth / 2,
+      behavior: "smooth"
+    });
+  }
+
+  categoryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const targetID = link.getAttribute("href");
+      const targetSection =
+        document.querySelector(targetID);
+
+      if (!targetSection) return;
+
+      const navigationHeight =
+        navigation.offsetHeight;
+
+      const sectionPosition =
+        targetSection.getBoundingClientRect().top +
+        window.scrollY -
+        navigationHeight -
+        9;
+
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: "smooth"
+      });
+
+      activateCategory(link);
+    });
+  });
+
+  /* Change active category while scrolling */
+
+  function updateActiveCategory() {
+    const visibleSections = menuSections.filter(
+      (section) =>
+        !section.classList.contains("hidden")
+    );
+
+    if (visibleSections.length === 0) return;
+
+    const marker =
+      window.scrollY +
+      navigation.offsetHeight +
+      85;
+
+    let currentSection = visibleSections[0];
+
+    visibleSections.forEach((section) => {
+      if (section.offsetTop <= marker) {
+        currentSection = section;
+      }
+    });
+
+    const matchingLink = categoryLinks.find(
+      (link) =>
+        link.getAttribute("href") ===
+        `#${currentSection.id}`
+    );
+
+    if (
+      matchingLink &&
+      !matchingLink.classList.contains("active")
+    ) {
+      activateCategory(matchingLink);
+    }
+  }
+
+  window.addEventListener(
+    "scroll",
+    updateActiveCategory,
+    { passive: true }
+  );
+
+  /* Search functionality */
+
+  searchInput.addEventListener("input", () => {
+    const searchText =
+      searchInput.value.trim().toLowerCase();
+
+    let resultCount = 0;
+
+    menuItems.forEach((item) => {
+      const itemText =
+        item.textContent.toLowerCase();
+
+      const matches =
+        itemText.includes(searchText);
+
+      item.classList.toggle(
+        "hidden",
+        !matches
+      );
+
+      if (matches) {
+        resultCount++;
+      }
+    });
+
+    menuGroups.forEach((group) => {
+      const matchingItem = group.querySelector(
+        ".menu-item:not(.hidden)"
+      );
+
+      const hasMatchingItem =
+        Boolean(matchingItem);
+
+      group.classList.toggle(
+        "hidden",
+        !hasMatchingItem
+      );
+
+      if (hasMatchingItem) {
+        group.open = true;
+      }
+    });
+
+    menuSections.forEach((section) => {
+      const visibleGroup = section.querySelector(
+        ".menu-group:not(.hidden)"
+      );
+
+      section.classList.toggle(
+        "hidden",
+        !visibleGroup
+      );
+    });
+
+    noResults.hidden = resultCount > 0;
+
+    updateActiveCategory();
+  });
+
+  updateActiveCategory();
+});
